@@ -1,614 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="images/logo.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pravin Mishra</title>
+  <title>Akos Bodor — DevOps Engineer</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
 </head>
-
 <body>
 
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="nav-container">
-
-      <!-- Logo -->
-      <div class="nav-logo" onclick="goToSection('home')">
-        <img src="images/logo.png" alt="Logo" />
-      </div>
-
-
-
-      <!-- Desktop Menu -->
+      <div class="nav-brand">AB</div>
       <div class="nav-links">
         <a href="#home">Home</a>
-
-        <a href="https://university.pravinmishra.in/learn" target="_blank">University</a>
-
-        <a href="https://blog.pravinmishra.com/" target="_blank">Blog</a>
-
-        <a href="#book">Book</a>
-
-        <a href="#courses">Courses</a>
-
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact" class="contact-btn">Contact</a>
       </div>
-
-
-      <div class="hamburger" onclick="toggleMenu()">
-        ☰
-      </div>
-
+      <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
     </div>
     <div id="mobileMenu" class="mobile-menu">
-      <button onclick="goToSection('home')">Home</button>
-      <a href="https://university.pravinmishra.in/learn" target="_blank">University</a>
-      <a href="https://blog.pravinmishra.com/" target="_blank">Blog</a>
-      <button onclick="goToSection('book')">Book</button>
-      <button onclick="goToSection('courses')">Courses</button>
-      <button class="mobile-contact" onclick="goToSection('contact')">Contact</button>
+      <a href="#home" onclick="toggleMenu()">Home</a>
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#experience" onclick="toggleMenu()">Experience</a>
+      <a href="#skills" onclick="toggleMenu()">Skills</a>
+      <a href="#certifications" onclick="toggleMenu()">Certifications</a>
+      <a href="#contact" class="mobile-contact" onclick="toggleMenu()">Contact</a>
     </div>
   </nav>
 
+  <!-- HERO -->
   <section id="home" class="hero">
-
-    <img src="images/image.png" alt="Hero Banner" class="hero-bg" loading="lazy">
-
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>
-        “Empowering thousands of students<br>
-        towards success.”
-      </h1>
+      <p class="hero-tag">
+        <i class="fa-brands fa-aws"></i> AWS Certified Cloud Practitioner &nbsp;|&nbsp;
+        <i class="fa-solid fa-location-dot"></i> Székesfehérvár, Hungary
+      </p>
+      <h1>Building Secure,<br>Scalable Cloud Infrastructure</h1>
+      <p class="hero-sub">13+ years in IT · 8.5 years at IBM · DevOps Engineer at EPAM</p>
+      <div class="hero-actions">
+        <a href="#experience" class="hero-btn-primary">View Experience</a>
+        <a href="#contact" class="hero-btn-secondary">Get In Touch</a>
+      </div>
     </div>
-
   </section>
+
+  <!-- ABOUT -->
   <section id="about" class="about-section">
     <div class="about-container">
-
-
-      <h1 class="about-title">Pravin Mishra</h1>
-
-      <p class="about-subtitle">
-        Pravin is a Cloud, DevOps, Data, and AI Consultant helping companies modernize
-        their systems, build scalable cloud architectures, and train thousands of
-        professionals globally. His aim is to make cloud adoption simple, practical,
-        and accessible to everyone.
-      </p>
-      <div class="about-signature">
-        <img src="images/signature.png" alt="signature" />
+      <div class="about-photo">
+        <img src="images/akos-profile.png" alt="Akos Bodor" />
       </div>
-
+      <h1 class="about-title">Akos Bodor</h1>
+      <p class="about-subtitle">
+        AWS Certified Cloud Practitioner with 13+ years of IT experience, including 8.5 years at IBM
+        across system administration, development, and automation roles. As a DevOps expert, I specialize
+        in cloud migration, CI/CD automation, and Infrastructure as Code — delivering secure, scalable,
+        and compliant solutions for enterprise clients in banking, insurance, cybersecurity, and telecom.
+      </p>
       <div class="about-grid">
-
         <div class="about-card">
-          <i class="fa-solid fa-briefcase"></i>
-          <h3>Cloud Consultant</h3>
-          <p>
-            Delivering modern cloud solutions on AWS and Azure. Helping companies scale,
-            secure, and optimize their infrastructure.
-          </p>
+          <i class="fa-brands fa-aws"></i>
+          <h3>Cloud Architecture</h3>
+          <p>Designing secure, scalable AWS infrastructure with the Well-Architected Framework. EC2, Auto Scaling, Lambda, CloudFront, SQS, Aurora.</p>
         </div>
-
         <div class="about-card">
-          <i class="fa-solid fa-book-open"></i>
-          <h3>Educator</h3>
-          <p>
-            Training 1000+ professionals in AWS, DevOps, Kubernetes, CI/CD pipelines, and cloud automation.
-          </p>
+          <i class="fa-solid fa-code-branch"></i>
+          <h3>DevOps & CI/CD</h3>
+          <p>Building and maintaining pipelines with GitHub Actions, GitLab CI, AWS CodePipeline, and Bamboo. Multi-runner Kubernetes deployments at scale.</p>
         </div>
-
         <div class="about-card">
-          <i class="fa-solid fa-pen-nib"></i>
-          <h3>Content Creator</h3>
-          <p>
-            Creating high-impact cloud & DevOps content consumed by thousands of learners worldwide.
-          </p>
+          <i class="fa-solid fa-file-code"></i>
+          <h3>Infrastructure as Code</h3>
+          <p>Production-grade IaC using Terraform, AWS CloudFormation, and Python CDK across cloud migration and platform engineering projects.</p>
         </div>
-
         <div class="about-card">
-          <i class="fas fa-user-tie"></i>
-          <h3>Founder</h3>
-          <p>
-            Founder of <strong>The CloudAdvisory</strong>, transforming cloud adoption through consulting and training.
-          </p>
+          <i class="fa-solid fa-shield-halved"></i>
+          <h3>SRE & Security</h3>
+          <p>SRE responsibilities, SOC 2 audit preparation, and security best practices applied across regulated enterprise environments.</p>
         </div>
-
       </div>
     </div>
   </section>
 
   <!-- SERVICES -->
   <section id="services" class="services-section">
-
     <div class="services-container">
-
-      <!-- Header -->
       <div class="services-header">
         <span class="services-tag">Services</span>
         <div class="services-line"></div>
         <h2>What I Offer</h2>
-        <p>
-          Comprehensive solutions to accelerate your cloud and DevOps transformation
-        </p>
+        <p>End-to-end cloud and DevOps expertise for enterprise-grade projects</p>
       </div>
-
-      <!-- Cards -->
       <div class="services-grid">
 
-        <!-- Card 1 -->
         <div class="service-card">
-          <span class="badge blue">Most Popular</span>
-
-          <div class="icon blue">
-            <i class="fa-solid fa-cloud"></i>
-          </div>
-
-          <h3>Courses on DevOps</h3>
-          <p>
-            Hands-on, industry-ready courses designed to upskill learners in Cloud,
-            DevOps, automation, and modern infrastructure practices.
-          </p>
-
+          <span class="badge blue">Core Expertise</span>
+          <div class="icon blue"><i class="fa-brands fa-aws"></i></div>
+          <h3>Cloud Migration</h3>
+          <p>Lift-and-shift and modernization migrations to AWS, emphasizing security, scalability, and operational efficiency for enterprise clients.</p>
           <ul>
-            <li>AWS, Azure & GCP Certifications</li>
-            <li>Kubernetes & Docker Mastery</li>
-            <li>CI/CD Pipeline Implementation</li>
-            <li>Infrastructure as Code (Terraform)</li>
-            <li>Real-world Projects & Labs</li>
+            <li>EC2 & Auto Scaling Group templates</li>
+            <li>AWS Application Migration Service</li>
+            <li>Aurora Serverless & RDS</li>
+            <li>Well-Architected Framework reviews</li>
+            <li>Banking, insurance & telecom delivery</li>
           </ul>
-
-          <a href="#courses" class="service-btn">
-            Learn More →
-          </a>
+          <a href="#contact" class="service-btn">Get In Touch →</a>
         </div>
 
-        <!-- Card 2 -->
         <div class="service-card">
-          <span class="badge yellow">Best Seller</span>
-
-          <div class="icon yellow">
-            <i class="fa-solid fa-book-open"></i>
-          </div>
-
-          <h3>Books on DevOps</h3>
-          <p>
-            Deeply insightful books focused on DevOps concepts, real-world implementations,
-            and career guidance for aspiring cloud engineers.
-          </p>
-
+          <span class="badge yellow">Most In-Demand</span>
+          <div class="icon yellow"><i class="fa-solid fa-code-branch"></i></div>
+          <h3>DevOps & CI/CD</h3>
+          <p>Designing and implementing automated pipelines, Kubernetes deployments, and developer tooling at scale across large organizations.</p>
           <ul>
-            <li>Comprehensive DevOps Guides</li>
-            <li>Real-world Case Studies</li>
-            <li>Career Development Strategies</li>
-            <li>Best Practices & Patterns</li>
-            <li>Interview Preparation</li>
+            <li>GitLab, GitHub Actions, Bamboo</li>
+            <li>Kubernetes (EKS, GKE) & Helm charts</li>
+            <li>AWS CodePipeline & CodeBuild</li>
+            <li>Multi-runner GitLab with Karpenter</li>
+            <li>100+ repo tagging with Claude Code</li>
           </ul>
-
-          <a href="#book" class="service-btn">
-            Learn More →
-          </a>
+          <a href="#contact" class="service-btn">Get In Touch →</a>
         </div>
 
-        <!-- Card 3 -->
         <div class="service-card">
           <span class="badge blue">Enterprise Grade</span>
-
-          <div class="icon blue">
-            <i class="fa-solid fa-users"></i>
-          </div>
-
-          <h3>Consulting Services</h3>
-          <p>
-            Helping brands and businesses with Cloud solution architecture,
-            DevOps adoption, infrastructure modernization, and strategic technology consulting.
-          </p>
-
+          <div class="icon blue"><i class="fa-solid fa-file-code"></i></div>
+          <h3>Infrastructure as Code</h3>
+          <p>Writing production-grade IaC with Terraform, CloudFormation, and Python CDK for reliable, repeatable, and auditable infrastructure.</p>
           <ul>
-            <li>Cloud Migration Strategy</li>
-            <li>DevOps Transformation</li>
-            <li>Architecture Design & Review</li>
-            <li>Cost Optimization</li>
-            <li>Team Training & Mentorship</li>
+            <li>Terraform modules & workspaces</li>
+            <li>AWS CloudFormation stacks</li>
+            <li>Python CDK (CloudFront, Lambda)</li>
+            <li>Serverless Lambda (Node.js, .NET, Python)</li>
+            <li>SOC 2 compliance & audit preparation</li>
           </ul>
-
-          <a href="#contact" class="service-btn">
-            Learn More →
-          </a>
+          <a href="#contact" class="service-btn">Get In Touch →</a>
         </div>
 
       </div>
     </div>
   </section>
 
-
-  <!-- COURSES -->
-  <section id="courses">
-    <h2 class="courses-title">Courses</h2>
-
-    <div class="courses-grid">
-
-      <!-- Course Card -->
-      <div class="course-card">
-        <img src="images/dmi-course.jpg" alt="Course" />
-        <h3>DMI – Cloud & DevOps Masterclass (Classroom Program)</h3>
-        <p class="duration">Duration: 20 hours</p>
-        <p class="price">Included in DMI Program</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.youtube.com/playlist?list=PLVOdqXbCs7bX88JeUZmK4fKTq2hJ5VS89" target="_blank">Enroll Now
-          →</a>
+  <!-- EXPERIENCE -->
+  <section id="experience" class="experience-section">
+    <div class="experience-container">
+      <div class="section-header">
+        <span class="services-tag">Career</span>
+        <div class="services-line"></div>
+        <h2>Experience</h2>
+        <p>13+ years across IBM, EPAM, OPSWAT, TCS and more</p>
       </div>
 
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/5492716_8a93_5.jpg" alt="Course" />
-        <h3>AWS DevOps & CI/CD with AWS CodePipeline</h3>
-        <p class="duration">Duration: 15 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/mastering-aws-devops-for-cloud-engineers/?referralCode=FA3DC2FC7EF76DE1A211"
-          target="_blank">Enroll Now →</a>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>DevOps Engineer</h3>
+                <p class="company">EPAM Systems</p>
+              </div>
+              <span class="timeline-date">Aug 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Introduced a company-wide tagging module across 100+ repositories using Claude Code</li>
+              <li>Supporting a team by troubleshooting AWS resources, Terraform templates, and Bamboo pipelines</li>
+            </ul>
+            <div class="tech-tags">
+              <span>AWS</span><span>Terraform</span><span>Bamboo</span><span>Claude Code</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>DevOps Engineer</h3>
+                <p class="company">Tata Consultancy Services</p>
+              </div>
+              <span class="timeline-date">May 2025 – Aug 2025</span>
+            </div>
+            <p class="project-label">AWS Infrastructure Modernization — French insurance lift-and-shift</p>
+            <ul>
+              <li>Planned and deployed PoC for pgpool with Aurora Serverless MySQL DB</li>
+              <li>Started VM migration from a data center to AWS using Application Migration Service</li>
+              <li>Created documentation for the lift-and-shift process</li>
+            </ul>
+            <div class="tech-tags">
+              <span>pgPool</span><span>Aurora Serverless</span><span>AWS Migration Service</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>DevOps / Platform Engineer</h3>
+                <p class="company">T-Systems Hungary Ltd.</p>
+              </div>
+              <span class="timeline-date">Mar 2025 – May 2025</span>
+            </div>
+            <p class="project-label">Cloud migration — German engineering & manufacturing company</p>
+            <ul>
+              <li>Developed multi-runner GitLab Runners with Karpenter in Terraform</li>
+              <li>Standardized microservice delivery via Kubernetes deployments using Helm</li>
+              <li>Created Helm charts and optimized the build process</li>
+            </ul>
+            <div class="tech-tags">
+              <span>Helm</span><span>Kubernetes</span><span>EKS</span><span>Terraform</span><span>GitLab</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>DevOps Engineer</h3>
+                <p class="company">EPAM Systems</p>
+              </div>
+              <span class="timeline-date">Nov 2024 – Mar 2025</span>
+            </div>
+            <ul>
+              <li>AWS CloudFront-related tasks using Python CDK for an Irish customer</li>
+            </ul>
+            <div class="tech-tags">
+              <span>AWS CloudFront</span><span>Python CDK</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>DevOps Engineer / SRE</h3>
+                <p class="company">OPSWAT</p>
+              </div>
+              <span class="timeline-date">Jul 2022 – Nov 2024</span>
+            </div>
+            <ul>
+              <li>Cloud migration using Terraform and AWS — acted as Cloud Solution Architect for the team</li>
+              <li>Applied the AWS Well-Architected Framework and security best practices</li>
+              <li>SRE responsibilities from July 2023</li>
+              <li>SOC 2 audit preparation in H1 2024</li>
+            </ul>
+            <div class="tech-tags">
+              <span>AWS</span><span>Terraform</span><span>SRE</span><span>SOC 2</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>DevOps Engineer</h3>
+                <p class="company">Think &amp; Vision</p>
+              </div>
+              <span class="timeline-date">Jan 2021 – Jul 2022</span>
+            </div>
+            <ul>
+              <li>Maintained legacy CI/CD (Travis, Appveyor, Octopus) and new AWS CodePipeline</li>
+              <li>Developed serverless Lambda applications in AWS (Node.js, .NET, Python)</li>
+              <li>Migrated infrastructure to IaC via AWS CloudFormation templates</li>
+            </ul>
+            <div class="tech-tags">
+              <span>AWS Lambda</span><span>CodePipeline</span><span>CloudFormation</span><span>Node.js</span><span>.NET</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot ibm-dot"></div>
+          <div class="timeline-card ibm-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Multiple Engineering Roles <span class="duration-badge">8.5 years</span></h3>
+                <p class="company">IBM</p>
+              </div>
+              <span class="timeline-date">Jun 2012 – Dec 2020</span>
+            </div>
+            <ul>
+              <li><strong>VMware Administrator</strong> (2020) — Nordic infrastructure, VMware NSX, vRA, vRO, vSphere, NSX</li>
+              <li><strong>DataStage Developer / ETL</strong> (2019–2020) — REST API, DB2, CSV data sources</li>
+              <li><strong>Junior Full Stack Developer</strong> (2018–2019) — Java + Angular 7, IBM Cloud migration (WAS Liberty + DB2)</li>
+              <li><strong>Automation Developer</strong> (2016–2017) — PowerShell and JavaScript automations</li>
+              <li><strong>VMware Administrator</strong> (2015–2016) — 2 vCenters, built ESXi host end-to-end</li>
+              <li><strong>Middleware System Administrator</strong> (2013–2015) — WebSphere, HTTP server, IBM MQ, file transfer lift&amp;shift</li>
+              <li><strong>Application Support (Security)</strong> (2012–2013) — IBM internal access management system</li>
+            </ul>
+            <div class="tech-tags">
+              <span>VMware NSX</span><span>IBM MQ</span><span>WebSphere</span><span>DataStage</span><span>Java</span><span>Angular</span><span>PowerShell</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot freelance-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Freelance Frontend Developer</h3>
+                <p class="company">Self Employed</p>
+              </div>
+              <span class="timeline-date">Sep 2009 – Jun 2012</span>
+            </div>
+            <ul>
+              <li>Designed, developed, and hosted websites for small businesses</li>
+              <li>HTML, CSS, JavaScript, PHP (forms), Adobe Flash, Photoshop</li>
+            </ul>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/5403140_ce56_12.jpg" alt="Course" />
-        <h3>Linux for DevOps, Cloud, and SRE Engineers</h3>
-        <p class="duration">Duration: 5 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/linux-for-cloud-engineers-a-complete-project-based-learning/?referralCode=9209159005B8D7A6B399"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/5403140_ce56_12.jpg" alt="Course" />
-        <h3>AWS Fundamentals with 2 Projects: Cloud for Beginners [2025]"</h3>
-        <p class="duration">Duration: 22.5 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/aws-fundamentals-amazon-web-services-for-beginners/?referralCode=D403975F7C1326B2BFA2"
-          target="_blank">Enroll Now →</a>
-      </div>
-      <!-- Course -->
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/5536474_9535_5.jpg" alt="">
-        <h3>Git & GitHub for Absolute Beginners with Project</h3>
-        <p class="duration">Duration: 2.5 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/git-and-github-for-beginners-start-coding-collaboratively/?referralCode=2D07E24EAB31E15FC5A4"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/6836427_cc7c.jpg" alt="">
-        <h3>AWS Cloud Projects for Data & AI Engineers: 5 Projects</h3>
-        <p class="duration">Duration: 4 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/aws-cloud-projects-for-data-ai-engineers-5-projects/?referralCode=4BCA2DC4C6950BF447FF"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/6462549_5d25_4.jpg" alt="">
-        <h3>DevOps for beginners: Docker, K8s, Cloud, CI/CD & 4 Projects</h3>
-        <p class="duration">Duration: 43.5 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/devops-for-beginners-docker-k8s-cloud-cicd-4-projects/?referralCode=C5BA8236CCE9FE004F98"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/6362029_fba1_4.jpg" alt="">
-        <h3>AWS Cloud Projects for Engineers: 5 Real-World Projects</h3>
-        <p class="duration">Duration: 11.5 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/aws-mastery-hands-on-cloud-projects-for-engineers/?referralCode=4143F31DC85951744CEB"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/6048441_ce3f_8.jpg" alt="">
-        <h3>[NEW] AWS Certified Cloud Practitioner CLF-C02 for Beginner</h3>
-        <p class="duration">Duration: 32.5 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/aws-certified-cloud-practitioner-clf-c02-aws-certification/?referralCode=E4CA6B2630644DB7A93E"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-      <div class="course-card">
-        <img src="https://img-c.udemycdn.com/course/480x270/6020724_2668_4.jpg" alt="">
-        <h3>Cloud Computing with AWS for Absolute Beginners</h3>
-        <p class="duration">Duration: 10.2 hours</p>
-        <p class="price">€9.99</p>
-        <span class="badge live">Live</span>
-        <a href="https://www.udemy.com/course/aws-cloud-computing-for-absolute-beginners/?referralCode=6798C46926888865BFD4"
-          target="_blank">Enroll Now →</a>
-      </div>
-
-
     </div>
   </section>
-  <!-- BOOKS -->
-  <section id="book" class="books">
 
-    <!-- Decorative blobs -->
-    <div class="glow glow-yellow" aria-hidden="true"></div>
-    <div class="glow glow-blue" aria-hidden="true"></div>
-
-    <header class="books-header">
-      <h2 class="books-title">
-        Featured Books
-        <span class="underline"></span>
-      </h2>
-    </header>
-
-    <div class="books-wrapper">
-
-      <!-- Book 1 -->
-      <article class="book-row">
-        <div class="book-img">
-          <img src="images/Git.jpg" alt="Ultimate Git and GitHub book cover" loading="lazy">
+  <!-- SKILLS -->
+  <section id="skills" class="skills-section">
+    <div class="skills-container">
+      <div class="section-header">
+        <span class="services-tag">Expertise</span>
+        <div class="services-line"></div>
+        <h2>Technical Skills</h2>
+        <p>Technologies and tools across 13+ years of hands-on engineering</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group">
+          <h3><i class="fa-brands fa-aws"></i> Cloud Platforms</h3>
+          <div class="skill-tags">
+            <span>AWS (EC2, S3, CloudFront, Lambda, SQS, RDS, Aurora, EKS)</span>
+            <span>Microsoft Azure</span>
+            <span>Google Cloud (GKE)</span>
+            <span>IBM Cloud</span>
+          </div>
         </div>
-
-        <div class="book-content">
-          <h3>Ultimate Git and GitHub for Modern Software Development</h3>
-          <p>Master Git, GitHub workflows, version control, and real-world team collaboration techniques.</p>
-          <p class="signature">“P. Mishra”</p>
-          <p class="author">— Pravin Mishra</p>
-          <div class="rating">⭐ 4.9 <span>(14 reviews)</span></div>
-          <a href="https://www.amazon.in/dp/8197223831" target="_blank" rel="noopener">Get Your Copy →</a>
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-file-code"></i> Infrastructure as Code</h3>
+          <div class="skill-tags">
+            <span>Terraform</span>
+            <span>AWS CloudFormation</span>
+            <span>Python CDK</span>
+            <span>Helm</span>
+          </div>
         </div>
-      </article>
-
-      <!-- Book 2 -->
-      <article class="book-row reverse">
-        <div class="book-img">
-          <img src="images/awsCloud.jpg" alt="Cloud Computing with AWS book cover" loading="lazy">
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-code-branch"></i> CI/CD</h3>
+          <div class="skill-tags">
+            <span>GitHub Actions</span>
+            <span>GitLab CI</span>
+            <span>AWS CodePipeline</span>
+            <span>Atlassian Bamboo</span>
+            <span>Travis CI</span>
+            <span>Appveyor</span>
+            <span>Octopus Deploy</span>
+          </div>
         </div>
-
-        <div class="book-content">
-          <h3>Cloud Computing with AWS</h3>
-          <p>A beginner-friendly guide to mastering AWS fundamentals.</p>
-          <p class="signature">“P. Mishra”</p>
-          <p class="author">— Pravin Mishra</p>
-          <div class="rating">⭐ 4.3 <span>(21 reviews)</span></div>
-          <a href="https://www.amazon.in/dp/1484291719" target="_blank" rel="noopener">Get Your Copy →</a>
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-dharmachakra"></i> Containers & Orchestration</h3>
+          <div class="skill-tags">
+            <span>Kubernetes (EKS, GKE)</span>
+            <span>Docker</span>
+            <span>Helm Charts</span>
+            <span>Karpenter</span>
+          </div>
         </div>
-      </article>
-
-      <!-- Book 3 -->
-      <article class="book-row">
-        <div class="book-img">
-          <img src="images/Devops.jpg" alt="Mastering DevOps book cover" loading="lazy">
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-code"></i> Languages</h3>
+          <div class="skill-tags">
+            <span>Python</span>
+            <span>Node.js</span>
+            <span>.NET</span>
+            <span>Java</span>
+            <span>PowerShell</span>
+            <span>JavaScript</span>
+            <span>Bash</span>
+          </div>
         </div>
-
-        <div class="book-content">
-          <h3>Mastering DevOps</h3>
-          <p>Your path to building, deploying, and scaling applications with AWS DevOps.</p>
-          <p class="signature">“P. Mishra”</p>
-          <p class="author">— Pravin Mishra</p>
-          <div class="rating">⭐ 5.0 <span>(1 review)</span></div>
-          <a href="https://www.amazon.in/dp/9356484880" target="_blank" rel="noopener">Get Your Copy →</a>
+        <div class="skill-group">
+          <h3><i class="fa-solid fa-robot"></i> AI & Tooling</h3>
+          <div class="skill-tags">
+            <span>Claude Code</span>
+            <span>MCP (Multi Agent Protocol)</span>
+            <span>AWS SQS</span>
+            <span>IBM MQ</span>
+            <span>pgPool</span>
+          </div>
         </div>
-      </article>
-
+      </div>
     </div>
   </section>
 
-
-
-  <!-- LEARNERS TRUST -->
-  <section id="community" class="trust-section">
-
-    <!-- Header -->
-    <header class="trust-header">
-      <span>Community</span>
-      <h2>Trusted by Learners Worldwide</h2>
-      <p>
-        A growing global community of cloud aspirants, engineers, and professionals
-        learning with Pravin Mishra.
-      </p>
-    </header>
-
-    <!-- Cards -->
-    <div class="trust-grid">
-
-      <a href="https://www.amazon.in/s?k=Pravin+Mishra&i=stripbooks" target="_blank" rel="noopener" class="trust-card">
-        <i class="fa-brands fa-amazon amazon"></i>
-        <h3>Amazon Author Page</h3>
-        <p>Explore all books written by Pravin</p>
-        <div class="line"></div>
-      </a>
-
-      <a href="https://www.youtube.com/@awswithpravinmishra" target="_blank" rel="noopener" class="trust-card">
-        <i class="fa-brands fa-youtube youtube"></i>
-        <h3>13K+ YouTube Subscribers</h3>
-        <p>Weekly hands-on cloud tutorials</p>
-        <div class="line"></div>
-      </a>
-
-      <a href="https://www.linkedin.com/in/pravin-mishra-aws-trainer/" target="_blank" rel="noopener"
-        class="trust-card">
-        <i class="fa-brands fa-linkedin linkedin"></i>
-        <h3>20K+ LinkedIn Followers</h3>
-        <p>Daily cloud insights & updates</p>
-        <div class="line"></div>
-      </a>
-
-      <a href="https://www.instagram.com/awspravinmishra/" target="_blank" rel="noopener" class="trust-card">
-        <i class="fa-brands fa-instagram instagram"></i>
-        <h3>2K+ Instagram Followers</h3>
-        <p>Behind the scenes of cloud teaching</p>
-        <div class="line"></div>
-      </a>
-
-      <a href="https://github.com/pravinmishraaws" target="_blank" rel="noopener" class="trust-card">
-        <i class="fa-solid fa-book book"></i>
-        <h3>Author of 3 Books</h3>
-        <p>Published on Apress & Amazon</p>
-        <div class="line"></div>
-      </a>
-
-    </div>
-
-    <!-- Stats (JS removed, real values shown) -->
-    <div class="trust-stats">
-      <div>
-        <h3>33K+</h3>
-        <p>Total Followers</p>
+  <!-- CERTIFICATIONS & EDUCATION -->
+  <section id="certifications" class="cert-section">
+    <div class="cert-container">
+      <div class="section-header">
+        <span class="services-tag">Credentials</span>
+        <div class="services-line"></div>
+        <h2>Certifications &amp; Education</h2>
+        <p>Continuous learning across cloud, networking, and software engineering</p>
       </div>
-      <div>
-        <h3>13K+</h3>
-        <p>YouTube Subs</p>
+
+      <div class="cert-grid">
+        <div class="cert-card featured">
+          <div class="cert-icon blue"><i class="fa-brands fa-aws"></i></div>
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p>Amazon Web Services</p>
+          <span class="cert-active">Active</span>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon blue"><i class="fa-brands fa-microsoft"></i></div>
+          <h3>Azure Fundamentals (AZ-900)</h3>
+          <p>Microsoft — ExamPro course</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon yellow"><i class="fa-solid fa-infinity"></i></div>
+          <h3>Azure DevOps Fundamentals</h3>
+          <p>Udemy</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon blue"><i class="fa-brands fa-aws"></i></div>
+          <h3>AWS Partner Accreditation</h3>
+          <p>Technical — Amazon Web Services</p>
+        </div>
       </div>
-      <div>
-        <h3>20K+</h3>
-        <p>LinkedIn Network</p>
-      </div>
-      <div>
-        <h3>3</h3>
-        <p>Published Books</p>
+
+      <h3 class="edu-title">Education</h3>
+      <div class="edu-grid">
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <h3>Obuda University</h3>
+            <p>Bachelor's Degree, Network Engineering</p>
+            <small>2014 – 2016 · Thesis: Virtualized Networks</small>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fa-solid fa-network-wired"></i></div>
+          <div>
+            <h3>Alba Regia Training Center</h3>
+            <p>Cisco CCNA</p>
+            <small>2015</small>
+          </div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-icon"><i class="fa-solid fa-globe"></i></div>
+          <div>
+            <h3>University of New Mexico</h3>
+            <p>Web Application Architectures Certificate</p>
+            <small>2014 · Ruby on Rails, middleware, deploy modern web apps</small>
+          </div>
+        </div>
       </div>
     </div>
-
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="contact-section">
-
     <div class="contact-container">
-
       <div class="contact-header">
         <span>Get In Touch</span>
-        <h2>Let's Start Your Cloud Journey</h2>
-        <p>
-          Ready to transform your skills or business? Contact us anytime.
-        </p>
+        <h2>Let's Build Something Great</h2>
+        <p>Open to DevOps and Cloud engineering opportunities. Feel free to reach out.</p>
       </div>
-
-      <!-- Grid -->
       <div class="contact-grid">
-
-        <!-- Contact Info Card -->
         <div class="contact-card-dark">
           <h3>Contact Information</h3>
-
           <div class="contact-item">
-            <div class="icon-box yellow">
-              <i class="fa-solid fa-envelope"></i>
-            </div>
+            <div class="icon-box yellow"><i class="fa-solid fa-envelope"></i></div>
             <div>
               <small>Email</small>
-              <p>mail@pravinmishra.com</p>
+              <p>akosbodor@gmail.com</p>
             </div>
           </div>
-
           <div class="contact-item">
-            <div class="icon-box blue">
-              <i class="fa-solid fa-phone"></i>
-            </div>
+            <div class="icon-box blue"><i class="fa-brands fa-linkedin"></i></div>
             <div>
-              <small>Phone</small>
-              <p>+358 (550) 5138-XXXX</p>
+              <small>LinkedIn</small>
+              <p>linkedin.com/in/akosbodor-12060852</p>
             </div>
           </div>
-
           <div class="contact-item">
-            <div class="icon-box yellow">
-              <i class="fa-solid fa-location-dot"></i>
-            </div>
+            <div class="icon-box yellow"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <small>Location</small>
-              <p>Global Remote Services</p>
+              <p>Székesfehérvár, Hungary</p>
             </div>
           </div>
         </div>
-
-        <!-- Quick Response -->
         <div class="contact-card-yellow">
-          <h3>Quick Response</h3>
+          <h3>Currently at EPAM</h3>
           <p>
-            We typically respond within 24 hours.
-            For urgent inquiries, please contact us directly via email or phone.
+            DevOps Engineer working on cloud infrastructure, Terraform automation, and Bamboo pipelines.
+            Open to interesting projects in cloud architecture and DevOps engineering.
           </p>
         </div>
-
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-container">
-
       <div class="footer-grid">
-
-        <!-- BRAND -->
         <div class="footer-brand">
-          <img src="images/logo.png" alt="Pravin Mishra" class="footer-logo" />
-
-          <p>
-            Empowering individuals and organizations with cutting-edge Cloud
-            and DevOps expertise through courses, books, and consulting.
-          </p>
-
+          <div class="footer-initials">AB</div>
+          <p>DevOps Engineer &amp; AWS Certified Cloud Practitioner with 13+ years delivering cloud solutions across banking, insurance, cybersecurity, and telecoms.</p>
           <div class="footer-socials">
-            <a href="https://www.linkedin.com/in/pravin-mishra-aws-trainer/" target="_blank"><i
-                class="fa-brands fa-linkedin"></i></a>
-            <a href="https://x.com/pravinmishra88" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="https://github.com/pravinmishraaws" target="_blank"><i class="fa-brands fa-github"></i></a>
-            <a href="mailto:contact@pravinmishra.com"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.instagram.com/awspravinmishra/" target="_blank"><i
-                class="fa-brands fa-instagram"></i></a>
-            <a href="https://www.youtube.com/@awswithpravinmishra" target="_blank"><i
-                class="fa-brands fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/akosbodor-12060852" target="_blank" rel="noopener">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:akosbodor@gmail.com">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
           </div>
         </div>
-
-        <!-- SERVICES -->
         <div>
           <h3>Services</h3>
           <ul>
-            <li><a href="#services">Cloud Courses</a></li>
-            <li><a href="#services">DevOps Books</a></li>
-            <li><a href="#services">Consulting</a></li>
-            <li><a href="#services">Corporate Training</a></li>
+            <li><a href="#services">Cloud Migration</a></li>
+            <li><a href="#services">DevOps &amp; CI/CD</a></li>
+            <li><a href="#services">Infrastructure as Code</a></li>
+            <li><a href="#skills">Kubernetes &amp; Helm</a></li>
           </ul>
         </div>
-
-        <!-- QUICK LINKS -->
         <div>
           <h3>Quick Links</h3>
           <ul>
             <li><a href="#about">About Me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="terms.html">Terms of Service</a></li>
           </ul>
         </div>
-
       </div>
-
-      <!-- Bottom -->
       <div class="footer-bottom">
-        <p>© <span id="year"></span> Pravin Mishra. All rights reserved.</p>
-        <p>Crafted with <span>cloud</span> excellence by Pravin Mishra</p>
+        <p>© <span id="year"></span> Akos Bodor. All rights reserved.</p>
+        <p>DevOps Engineer &nbsp;·&nbsp; AWS Certified Cloud Practitioner</p>
       </div>
-
     </div>
   </footer>
 
-
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('show');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
 </body>
-
 </html>
