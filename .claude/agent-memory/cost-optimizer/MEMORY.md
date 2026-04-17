@@ -1,0 +1,4 @@
+- [CloudFront PriceClass_200 vs cheaper alternatives](cloudfront-pricing.md) — static portfolio can use PriceClass_100
+- [S3 lifecycle policies missing](s3-lifecycle.md) — no rules for old/deleted versions; add expire rules
+- [Cache TTL optimization opportunity](caching-strategy.md) — AWS Managed CachingOptimized policy can be tuned further
+- [DynamoDB backend not yet enabled](terraform-backend.md) — optional optimization when bootstrap is complete

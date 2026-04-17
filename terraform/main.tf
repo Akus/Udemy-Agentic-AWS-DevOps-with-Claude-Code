@@ -21,6 +21,32 @@ resource "aws_s3_bucket_public_access_block" "site" {
 }
 
 ###############################################################
+# S3 Lifecycle — expire old versions and incomplete uploads
+###############################################################
+
+resource "aws_s3_bucket_lifecycle_configuration" "site" {
+  bucket = aws_s3_bucket.site.id
+
+  rule {
+    id     = "expire-noncurrent-versions"
+    status = "Enabled"
+
+    noncurrent_version_expiration {
+      noncurrent_days = 30
+    }
+  }
+
+  rule {
+    id     = "abort-incomplete-multipart-uploads"
+    status = "Enabled"
+
+    abort_incomplete_multipart_upload {
+      days_after_initiation = 7
+    }
+  }
+}
+
+###############################################################
 # CloudFront Origin Access Control (OAC)
 ###############################################################
 
@@ -61,6 +87,32 @@ resource "aws_s3_bucket_policy" "site" {
 }
 
 ###############################################################
+# CloudFront Cache Policy — longer TTLs for static assets
+###############################################################
+
+resource "aws_cloudfront_cache_policy" "site_optimized" {
+  name        = "${var.project_name}-cache-policy"
+  comment     = "Optimized caching for static portfolio site"
+  min_ttl     = 0
+  default_ttl = 86400
+  max_ttl     = 31536000
+
+  parameters_in_cache_key_and_forwarded_to_origin {
+    cookies_config {
+      cookie_behavior = "none"
+    }
+    headers_config {
+      header_behavior = "none"
+    }
+    query_strings_config {
+      query_string_behavior = "none"
+    }
+    enable_accept_encoding_gzip   = true
+    enable_accept_encoding_brotli = true
+  }
+}
+
+###############################################################
 # CloudFront Distribution
 ###############################################################
 
@@ -68,7 +120,7 @@ resource "aws_cloudfront_distribution" "site" {
   enabled             = true
   is_ipv6_enabled     = true
   default_root_object = "index.html"
-  price_class         = "PriceClass_200"
+  price_class         = "PriceClass_100"
 
   comment = "${var.project_name} (${var.environment})"
 
@@ -85,8 +137,7 @@ resource "aws_cloudfront_distribution" "site" {
     cached_methods         = ["GET", "HEAD"]
     compress               = true
 
-    # AWS Managed CachingOptimized policy
-    cache_policy_id = "658327ea-f89d-4fab-a63d-7e88639e58f6"
+    cache_policy_id = aws_cloudfront_cache_policy.site_optimized.id
   }
 
   custom_error_response {
