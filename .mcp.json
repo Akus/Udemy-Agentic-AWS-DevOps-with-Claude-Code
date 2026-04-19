@@ -11,12 +11,15 @@
         "hashicorp/terraform-mcp-server"
       ]
     },
-    "aws": {
+    "aws-mcp": {
       "command": "uvx",
+      "timeout": 100000,
+      "transport": "stdio",
       "args": [
-        "awslabs.aws-api-mcp-server@latest"
-      ],
-      "env": {}
+        "mcp-proxy-for-aws@latest",
+        "https://aws-mcp.us-east-1.api.aws/mcp",
+        "--metadata", "AWS_REGION=eu-north-1"
+      ]
     }
   }
 }
